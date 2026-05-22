@@ -1,6 +1,5 @@
 import React from 'react';
 import './DemoGuideModal.css';
-import demoVideo from '../Recording 2026-05-22 102534.mp4';
 
 export default function DemoGuideModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -20,20 +19,6 @@ export default function DemoGuideModal({ isOpen, onClose }) {
 
         <div className="guide-content">
           
-          {/* Demo Video Section */}
-          <div className="guide-section">
-            <h3 className="section-heading">🎬 Demo Video</h3>
-            <div className="video-container" style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', background: '#000' }}>
-              <video 
-                src={demoVideo} 
-                controls 
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-
           {/* Demo Login Credentials */}
           <div className="guide-section">
             <h3 className="section-heading">🔑 Demo Login Credentials</h3>
