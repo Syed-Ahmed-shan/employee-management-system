@@ -1,6 +1,7 @@
 package com.ems.employee_management_system.config;
 
 import com.ems.employee_management_system.entity.User;
+import com.ems.employee_management_system.entity.Role;
 import com.ems.employee_management_system.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,7 +27,7 @@ public class DatabaseSeeder implements CommandLineRunner {
             User admin = new User();
             admin.setUsername("Ahmed");
             admin.setPassword(passwordEncoder.encode("admin"));
-            admin.setRole("ROLE_ADMIN");
+            admin.setRole(Role.ROLE_ADMIN);
             admin.setFirstLogin(false);
             
             userRepository.save(admin);
