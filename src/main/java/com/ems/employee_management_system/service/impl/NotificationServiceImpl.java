@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {
@@ -16,6 +17,9 @@ public class NotificationServiceImpl implements NotificationService {
 
     private final NotificationRepository notificationRepository;
     private final JavaMailSender mailSender;
+
+    @Value("${spring.mail.username}")
+    private String senderEmail;
 
     public NotificationServiceImpl(NotificationRepository notificationRepository, JavaMailSender mailSender) {
         this.notificationRepository = notificationRepository;
@@ -32,8 +36,7 @@ public class NotificationServiceImpl implements NotificationService {
         // Send real email with credentials
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            // In a real app you might use a generic "from" address
-            message.setFrom("ems-portal@company.com");
+            message.setFrom(senderEmail);
             message.setTo(email);
             message.setSubject("Welcome to EMS! Your Account Credentials");
             message.setText("Hello " + employeeName + ",\n\n" +
