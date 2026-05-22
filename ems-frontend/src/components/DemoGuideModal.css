@@ -1,0 +1,194 @@
+/* Demo Guide Modal Styling */
+
+.guide-modal {
+  padding: 0;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.guide-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px;
+  background: var(--gradient-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.guide-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.guide-content {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.guide-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+/* Video Placeholder */
+.video-placeholder {
+  background: #0f172a;
+  border: 1px dashed var(--border-accent);
+  border-radius: var(--radius);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  box-shadow: inset 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.video-icon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+/* Credentials Grid */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.credential-card {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(15,23,42,0.4);
+}
+
+.card-header {
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-card .card-header { background: rgba(139,92,246,0.15); color: #a78bfa; border-bottom: 1px solid rgba(139,92,246,0.3); }
+.manager-card .card-header { background: rgba(59,130,246,0.15); color: #60a5fa; border-bottom: 1px solid rgba(59,130,246,0.3); }
+.employee-card .card-header { background: rgba(16,185,129,0.15); color: #34d399; border-bottom: 1px solid rgba(16,185,129,0.3); }
+
+.card-body {
+  padding: 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.card-body strong {
+  color: var(--text-secondary);
+}
+
+/* Flow Steps */
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flow-step {
+  display: flex;
+  gap: 16px;
+  background: rgba(30,41,59,0.5);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.admin-icon { background: rgba(139,92,246,0.15); }
+.manager-icon { background: rgba(59,130,246,0.15); }
+.employee-icon { background: rgba(16,185,129,0.15); }
+
+.step-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.step-content ul {
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.step-content li {
+  margin-bottom: 4px;
+}
+
+/* Floating Info Button */
+.floating-info-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.floating-info-btn:hover {
+  background: rgba(59,130,246,0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.info-icon {
+  background: var(--gradient-main);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
