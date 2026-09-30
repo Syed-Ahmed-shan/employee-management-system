@@ -132,12 +132,7 @@ Role checks are enforced on the server, not only in the UI.
 Secrets and credentials are kept out of the repository.
 Screenshots
 
-Add screenshots of your login page and each dashboard here:
 
-![Login](screenshots/login.png)
-![Admin Dashboard](screenshots/admin-dashboard.png)
-![Manager Dashboard](screenshots/manager-dashboard.png)
-![Employee Dashboard](screenshots/employee-dashboard.png)
 Future Improvements
 Email notifications for task assignment and status changes
 Pagination, search, and filters for employee and task lists
